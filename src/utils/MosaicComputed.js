@@ -9,7 +9,7 @@ export function mosaicMaker(imgArray){
   let repeats = []
   imgArray.forEach((url, i) => {
     urls.push(`url('${url}')`)
-    if(i < imgArray.length - 1){
+    if(i < imgArray.length - 1 || i >= 5){
       positions.push(`${col[i]} ${row[i]}`)
       repeats.push('no-repeat')
       sizes.push('50%')
