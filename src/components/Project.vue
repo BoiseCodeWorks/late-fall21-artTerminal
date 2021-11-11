@@ -30,6 +30,7 @@ export default {
   props: { project: { type: Object, required: true } },
   setup(props) {
     return {
+      // NOTE computed for coverImge background
       coverImg: computed(() => `url(${props.project.coverImg})`),
       openDetails() {
         projectsService.setActive(props.project);
@@ -71,6 +72,7 @@ export default {
 }
 
 .cover-image {
+  /* NOTE example of v-bind styling */
   background-image: v-bind(coverImg);
   background-position: center;
   background-size: cover;
