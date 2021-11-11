@@ -1,7 +1,9 @@
 <template>
   <div class="search row px-5">
     <div class="col-12">
+      <!-- NOTE submits searches when the form is submitted -->
       <form @submit.prevent="searchProjects" class="input-group">
+        <!-- NOTE keypress submits on each keypress, ideally you don't want both of these on your search bar but can be helpful -->
         <input
           @keypress="searchProjects"
           v-model="searchText"
